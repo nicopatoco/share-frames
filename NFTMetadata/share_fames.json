@@ -1,0 +1,27 @@
+{
+    "name": "Share Frames NFT",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla lorem turpis, pharetra accumsan metus scelerisque vitae.",
+    "image": "https://bafybeibukexnty23kpupznogkjmi4brjyzap5qyz35y7anztjfygeudp3u.ipfs.w3s.link/ShareFrames.png",
+    "attributes": [
+        {
+            "trait_type": "Type1",
+            "value": "Value 1"
+        },
+        {
+            "trait_type": "Type1",
+            "value": "Value 2"
+        },
+        {
+            "trait_type": "Type1",
+            "value": "Value 3"
+        },
+        {
+            "trait_type": "Type1",
+            "value": "Value 4"
+        },
+        {
+            "trait_type": "Type1",
+            "value": "Value 5"
+        }
+    ]
+}
