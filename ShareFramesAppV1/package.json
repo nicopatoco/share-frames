@@ -12,12 +12,14 @@
     "lint": "next lint && npx prettier --check \"{__tests__,components,pages,styles}/**/*.{ts,tsx,js,jsx}\" && npx tsc --noEmit"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.3",
-    "@heroicons/react": "^2.0.12",
-    "@privy-io/react-auth": "1.54.0",
-    "@tailwindcss/forms": "^0.5.3",
-    "next": "latest",
-    "react": "18.2.0"
+    "@coinbase/onchainkit": "^0.2.1",
+    "@farcaster/hub-nodejs": "^0.10.21",
+    "@privy-io/react-auth": "^1.59.5",
+    "axios": "^1.6.7",
+    "next": "14.1.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "viem": "^2.6.1"
   },
   "devDependencies": {
     "@tsconfig/next": "^2.0.0",
