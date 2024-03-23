@@ -17,9 +17,7 @@ export default function Page() {
     return (
         <>
             <HeaderSection />
-            <div className="min-h-viewport-minus-sections">
-                <DashboardSection />
-            </div>
+            <DashboardSection />
             
             <FooterSectionWhite />
         </>
