@@ -8,6 +8,7 @@ import HeaderLandingSection from '@/components/header-landing-section';
 import HeroSection from '@/components/hero-section';
 import HowWorksSection from '@/components/how-works-section';
 import DisclaimerSection from '@/components/disclaimer-section';
+import DirectorySection from "@/components/directory";
 
 
 export default function Home() {
@@ -22,7 +23,7 @@ export default function Home() {
   return (
     <>
       <HeaderLandingSection />
-      <HeroSection />
+      <DirectorySection />
       <HowWorksSection />
       <DisclaimerSection /> 
     </>
