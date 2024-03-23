@@ -11,6 +11,11 @@ export default function MyFramesSection() {
     router.push("/frame");
   };
 
+  const viewSubscribers = () => {
+    console.log("View Subscribers");
+    router.push("/subscribers");
+  };
+
   const editFrameSet = () => {
     console.log("Create a frame set");
     router.push("/frame");
@@ -50,6 +55,7 @@ export default function MyFramesSection() {
                 <div className="flex space-x-2">
                   <Button className="bg-blue-500 text-white" onClick={editFrameSet}>Edit</Button>
                   <Button className="bg-red-500 text-white" onClick={deleteFrameSet}>Delete</Button>
+                  <Button className="bg-blue-500 text-white" onClick={viewSubscribers}>View Subscribers</Button>
                 </div>
               </TableCell>
             </TableRow>
@@ -62,6 +68,7 @@ export default function MyFramesSection() {
                 <div className="flex space-x-2">
                   <Button className="bg-blue-500 text-white" onClick={editFrameSet}>Edit</Button>
                   <Button className="bg-red-500 text-white" onClick={deleteFrameSet}>Delete</Button>
+                  <Button className="bg-blue-500 text-white" onClick={viewSubscribers}>View Subscribers</Button>
                 </div>
               </TableCell>
             </TableRow>
@@ -74,6 +81,7 @@ export default function MyFramesSection() {
                 <div className="flex space-x-2">
                   <Button className="bg-blue-500 text-white" onClick={editFrameSet}>Edit</Button>
                   <Button className="bg-red-500 text-white" onClick={deleteFrameSet}>Delete</Button>
+                  <Button className="bg-blue-500 text-white" onClick={viewSubscribers}>View Subscribers</Button>
                 </div>
               </TableCell>
             </TableRow>

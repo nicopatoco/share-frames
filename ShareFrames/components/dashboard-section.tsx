@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button"
 import { Slider } from "@/components/ui/slider"
 import { JSX, SVGProps } from "react"
 import { CardContent, Card } from "@/components/ui/card"
-import { useRouter } from 'next/navigation'
 import MyFramesSection from "./my-frames"
 
 export default function DashboardSection() {
