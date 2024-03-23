@@ -8,13 +8,6 @@ import { useRouter } from 'next/navigation'
 import MyFramesSection from "./my-frames"
 
 export default function DashboardSection() {
-
-    const router = useRouter();
-
-    const requestLoanAction = () => {
-      console.log("Request Loan Action");
-      router.push("/add-contract");
-    };
   
   return (
     <div className="text-black bg-white py-32 px-8">
