@@ -22,8 +22,8 @@ export default function HeaderLandingSection() {
 
 
   return (
-    <div className="bg-gradient-to-r from-orange-300 via-red-300 to-orange-300 px-12 py-6">
-        <div className="rounded-lg flex justify-between items-center px-6 py-4 shadow-sm border-grey border-[1px]">
+    <div className="px-12 py-6">
+        <div className="rounded-lg flex justify-between items-center px-6 py-4">
 
             <div className="flex items-center">
             <Sheet>

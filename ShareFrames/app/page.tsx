@@ -9,6 +9,7 @@ import HeroSection from '@/components/hero-section';
 import HowWorksSection from '@/components/how-works-section';
 import DisclaimerSection from '@/components/disclaimer-section';
 import DirectorySection from "@/components/directory";
+import FooterSectionWhite from "@/components/footer-section-white"
 
 
 export default function Home() {
@@ -25,7 +26,8 @@ export default function Home() {
       <HeaderLandingSection />
       <DirectorySection />
       <HowWorksSection />
-      <DisclaimerSection /> 
+      <DisclaimerSection />
+      <FooterSectionWhite /> 
     </>
   );
 }

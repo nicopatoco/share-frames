@@ -3,13 +3,13 @@ import { JSX, SVGProps } from "react"
 
 export default function HowWorksSection() {
   return (
-    <div className="bg-[#2c2541] text-white">
+    <div className="bg-[#000] text-white">
       <div className="container mx-auto px-4 py-24">
         <h2 className="text-4xl font-bold text-center mb-16">How Share Frames Work for You</h2>
         <div className="flex justify-between">
           <div className="w-1/3 px-4">
             <div className="flex flex-col items-center text-center">
-              <div className="p-4 mb-4 bg-[#6e42a5] rounded-full">
+              <div className="p-4 mb-4 bg-[#ca8a04] rounded-full">
                 <ShieldCheckIcon className="text-white h-8 w-8" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Creators</h3>
@@ -26,7 +26,7 @@ export default function HowWorksSection() {
           </div>
           <div className="w-1/3 px-4">
             <div className="flex flex-col items-center text-center">
-              <div className="p-4 mb-4 bg-[#6e42a5] rounded-full">
+              <div className="p-4 mb-4 bg-[#ca8a04] rounded-full">
                 <LockIcon className="text-white h-8 w-8" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Sharers</h3>
@@ -43,7 +43,7 @@ export default function HowWorksSection() {
           </div>
           <div className="w-1/3 px-4">
             <div className="flex flex-col items-center text-center">
-              <div className="p-4 mb-4 bg-[#6e42a5] rounded-full">
+              <div className="p-4 mb-4 bg-[#ca8a04] rounded-full">
                 <BarChartIcon className="text-white h-8 w-8" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Creators and Sharers</h3>
