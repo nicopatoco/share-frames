@@ -5,7 +5,7 @@ export default function HowWorksSection() {
   return (
     <div className="bg-[#2c2541] text-white">
       <div className="container mx-auto px-4 py-24">
-        <h2 className="text-4xl font-bold text-center mb-16">How Share Frames Works for You</h2>
+        <h2 className="text-4xl font-bold text-center mb-16">How Share Frames Work for You</h2>
         <div className="flex justify-between">
           <div className="w-1/3 px-4">
             <div className="flex flex-col items-center text-center">
