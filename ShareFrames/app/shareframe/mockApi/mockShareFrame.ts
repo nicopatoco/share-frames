@@ -22,13 +22,13 @@ const frameData = [
   {
     sfid: "1234",
     title: "This is a title",
-    externalUrl: "https://www.google.com",
+    externalUrl: "https://medium.com/@danettewallace/blockchain-is-more-than-a-market-its-a-movement-cdb9fce80851",
     frames: [
       {
         frameId: "1",
         frameData: {
-          title: "This is a title page 1",
-          description: "This is a description",
+          title: "Blockchain Is More Than A Market. It’s A Movement",
+          description: "Many people think that market cap is an indication of a platform’s success, but people who think that are sorely mistaken.",
           sideImageUrl:
             "https://raw.githubusercontent.com/nicopatoco/share-frames/master/ShareFrames/public/side-image.svg",
         },
@@ -36,8 +36,8 @@ const frameData = [
       {
         frameId: "2",
         frameData: {
-          title: "This is a title Page 2",
-          description: "This is a description",
+          title: "",
+          description: "A coin may do well in the stock market but that is no indication of how well the platform is doing. Market graphs only show how much people are willing to pay. Many times, the people who are investing are doing so based on a future projection, an idea, a vision. They’re not usually investing in proven, working ecosystems. Crypto market graphs do not show how much a platform is accomplishing in the real world.",
           sideImageUrl:
             "https://raw.githubusercontent.com/nicopatoco/share-frames/master/ShareFrames/public/side-image.svg",
         },
@@ -45,23 +45,14 @@ const frameData = [
       {
         frameId: "3",
         frameData: {
-          title: "This is a title Page 3",
-          description: "This is a description",
+          title: "Decentralized Networks Are Growing",
+          description: 'For example, Ethereum is not number one in market cap but Ethereum is clearly a front runner in activity. As Lubin says, “Market cap doesn’t reflect activity. Decentralized networks are growing.”',
           sideImageUrl:
             "https://raw.githubusercontent.com/nicopatoco/share-frames/master/ShareFrames/public/side-image.svg",
         },
       },
       {
         frameId: "4",
-        frameData: {
-          title: "This is a title Page 4",
-          description: "This is a description",
-          sideImageUrl:
-            "https://raw.githubusercontent.com/nicopatoco/share-frames/master/ShareFrames/public/side-image.svg",
-        },
-      },
-      {
-        frameId: "5",
         frameData: {
           title: "Get rewarded for Sharing!",
           description:
