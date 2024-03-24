@@ -13,7 +13,7 @@ export default function DirectorySection() {
         <img src="sflogo.svg" alt="logo" className="w-30 h-30 object-contain object-center"></img>
       </div>
       <h1 className="text-2xl font-medium mb-12 leading-snug max-w-4xl pt-10">
-        Share-Frames is a marketing tool for projects and content creators that want to scale in a Web3 world. Share Frames allow creators to collaborate with Web3 social media users in a win-win incentive program.
+        Share-Frames is a marketing tool for projects and content creators that want to scale in a Web3 world. Share-Frames allow creators to collaborate with Web3 social media users in a win-win incentive program.
       </h1>
 
 

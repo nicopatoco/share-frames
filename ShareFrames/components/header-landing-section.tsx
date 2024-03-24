@@ -43,8 +43,8 @@ export default function HeaderLandingSection() {
               </SheetContent>
             </Sheet>
             <Link href="/" className="ml-4 lg:ml-0">
-              <Image src="/logo.png" width={100} height={100} alt="Share Frames Logo" />
-              {/* <h1 className="text-xl font-bold">Share Frames</h1> */}
+              {/* <Image src="/logo.png" width={100} height={100} alt="Share Frames Logo" /> */}
+              <h1 className="text-xl font-bold">Share-Frames</h1>
             </Link>
           </div>
 
