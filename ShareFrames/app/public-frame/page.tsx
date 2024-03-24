@@ -1,12 +1,9 @@
-'use client'
-
 import { useSearchParams } from 'next/navigation'
 import { FrameMetadata } from '@coinbase/onchainkit';
 import { getFarcasterUserAddress } from '@coinbase/onchainkit/farcaster';
 import { Suspense } from "react"
 
-export default async function HomePage() {
-
+function Frame() {
     const searchParams = useSearchParams()
     const shareFrameId = searchParams.get('sfid')
     let pageNumberString = searchParams.get('page');
@@ -33,7 +30,6 @@ export default async function HomePage() {
     let nextFrameUrl = siteURL + '?sfid=' + shareFrameId + '&page=' + nextPageNumber;
 
     return (
-        <Suspense>
             <FrameMetadata
                 ogTitle='Welcome to the Park'
                 ogDescription='This is a park with a beautiful lake'
@@ -60,6 +56,14 @@ export default async function HomePage() {
                 }}
                 postUrl={nextFrameUrl}
             />
-        </Suspense>
     );
+  }
+
+export default async function HomePage() {
+    return (
+        // You could have a loading skeleton as the `fallback` too
+        <Suspense>
+          <Frame />
+        </Suspense>
+      )
 }
