@@ -1,3 +1,5 @@
+"use client";
+
 import { useSearchParams } from 'next/navigation'
 import { FrameMetadata } from '@coinbase/onchainkit';
 import { getFarcasterUserAddress } from '@coinbase/onchainkit/farcaster';
