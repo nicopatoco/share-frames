@@ -38,7 +38,6 @@ export default async function Home({ searchParams }: NextServerPageProps) {
   const previousFrame = getPreviousFrame<State>(searchParams);
 
   let sfid  = searchParams?.sfid;
-
   console.log("*** sfid ***", sfid);
 
   const frameMessage = await getFrameMessage(previousFrame.postBody, {
