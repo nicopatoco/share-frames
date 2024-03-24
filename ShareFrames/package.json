@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@coinbase/onchainkit": "^0.11.0",
     "@hookform/resolvers": "^3.3.4",
     "@privy-io/react-auth": "^1.59.5",
     "@radix-ui/react-accordion": "^1.1.2",
@@ -42,9 +43,11 @@
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.51.1",
+    "react-is": "^18.2.0",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^0.9.0",
+    "viem": "^2.8.18",
     "zod": "^3.22.4"
   },
   "devDependencies": {
