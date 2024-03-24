@@ -175,9 +175,10 @@ export default async function Home({ searchParams }: NextServerPageProps) {
               </div>
             </div>
           </FrameImage>
-          <FrameButton action="mint" target={NFTS[0]!.tokenUrl}>
+          {/* <FrameButton action="mint" target={NFTS[0]!.tokenUrl}>
             Get Rewards by Sharing
-          </FrameButton>
+          </FrameButton> */}
+          <FrameButton action="mint" target={`eip155:84532:0xb31e157f357e59c4D08a3e43CCC7d10859da829F`}>Get Rewards by Sharing</FrameButton>
           <FrameButton>Leaderboard</FrameButton>
           <FrameButton>←</FrameButton>
         </FrameContainer>
