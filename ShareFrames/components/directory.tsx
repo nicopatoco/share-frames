@@ -11,7 +11,7 @@ export default function DirectorySection() {
 
       <h1 className="text-5xl font-bold mb-4 leading-snug text-white ">Share Frames</h1>
       <h1 className="text-3xl font-bold mb-12 leading-snug  max-w-4xl">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mauris nunc,"
+        "Share Frames is a marketing tool for projects and content creators that want to scale in a Web3 world. Share Frames allow creators to collaborate with Web3 social media users in a win-win incentive program."
       </h1>
 
 

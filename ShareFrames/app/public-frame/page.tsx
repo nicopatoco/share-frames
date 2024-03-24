@@ -22,6 +22,8 @@ export default async function HomePage() {
 
     if (pageNumber < maxPage) {
         nextPageNumber = pageNumber + 1;
+    } else {
+        nextPageNumber = maxPage;
     }
 
     //const userAddress = await getFarcasterUserAddress(fid, options);
@@ -31,6 +33,8 @@ export default async function HomePage() {
 
     return (
         <FrameMetadata
+            ogTitle='Welcome to the Park'
+            ogDescription='This is a park with a beautiful lake'
             buttons={[
                 {
                     label: 'Tell me the story',
@@ -41,12 +45,8 @@ export default async function HomePage() {
                     target: 'https://www.google.com'
                 },
                 {
-                    action: 'post_redirect',
-                    label: 'Go page:' + 'c:' + pageNumberString + 'n:'+nextPageNumber,
-                },
-                {
-                    action: 'post_redirect',
-                    label: 'Redirect to cute pictures',
+                    action: 'post',
+                    label: 'Go page:' + nextFrameUrl,
                 },
             ]}
             image={{
@@ -56,7 +56,7 @@ export default async function HomePage() {
             input={{
                 text: 'Tell me a boat story',
             }}
-            postUrl={nextFrameUrl}
+            postUrl={ nextFrameUrl }
         />
     );
 }
