@@ -1,3 +1,5 @@
+"use client";
+
 import { useSearchParams } from 'next/navigation'
 import { FrameMetadata } from '@coinbase/onchainkit';
 import { getFarcasterUserAddress } from '@coinbase/onchainkit/farcaster';
@@ -30,6 +32,8 @@ function Frame() {
     let nextFrameUrl = siteURL + '?sfid=' + shareFrameId + '&page=' + nextPageNumber;
 
     return (
+        <>
+        <meta property="fc:frame" content="vNext" />
             <FrameMetadata
                 ogTitle='Welcome to the Park'
                 ogDescription='This is a park with a beautiful lake'
@@ -56,6 +60,7 @@ function Frame() {
                 }}
                 postUrl={nextFrameUrl}
             />
+        </>
     );
   }
 
