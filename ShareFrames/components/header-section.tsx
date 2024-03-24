@@ -10,6 +10,7 @@ import { usePrivy } from '@privy-io/react-auth';
 import { Sheet, SheetContent, SheetTrigger } from "../components/ui/sheet";
 import { Menu, Moon, Sun } from "lucide-react";
 import GetStartedButtonHeader from './get-started-button-header';
+import { displayUsername } from "@/lib/utils";
 
 import Image from "next/image";
 
@@ -25,7 +26,7 @@ export default function HeaderSection() {
 
   return (
     <div className="px-12 py-6">
-        <div className="bg-white rounded-lg flex justify-between items-center px-6 py-4 shadow-sm border-grey border-[1px]">
+        <div className="bg-white flex justify-between items-center px-6 py-4 ">
 
             <div className="flex items-center">
             <Sheet>
@@ -41,6 +42,9 @@ export default function HeaderSection() {
                       </Link>
                       <Link href="/dashboard" className="block px-2 py-1 text-lg">
                       Dashboard
+                      </Link>
+                      <Link href="/subscribers" className="block px-2 py-1 text-lg">
+                      Subscribers
                       </Link>
                     </>
                   )}
@@ -66,12 +70,24 @@ export default function HeaderSection() {
                           Dashboard
                       </Link>
                   </Button>
+                  <Button asChild variant="ghost">
+                      <Link href="/subscribers" className="text-sm font-medium transition-colors">
+                          Subscribers
+                      </Link>
+                  </Button>
                 </>
               )}          </nav>
 
             <div className="flex items-center">
-              {authenticated && ( user?.farcaster?.ownerAddress )}  
               <GetStartedButtonHeader />
+            </div>
+            <div className="absolute top-15 right-40" >
+            {authenticated && ( 
+                <>
+                <span>{displayUsername(user?.farcaster?.ownerAddress)}</span>
+                </>
+                
+               )}  
             </div>
         </div>
     </div>
