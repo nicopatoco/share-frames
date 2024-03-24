@@ -20,14 +20,14 @@ export default function GetStartedButtonHeader() {
     <> 
         { authenticated && (
             <Button 
-            className="bg-[#7bdbfb] hover:bg-[#98daf0] text-black rounded-md transition-colors duration-200"
+            className="bg-[#ca8a04] hover:bg-[#ca8a04] rounded-none text-white transition-colors duration-200"
             onClick={logout}>
                 Logout
             </Button>            
         )}
         { !authenticated && (
             <Button 
-            className="bg-[#7bdbfb] hover:bg-[#98daf0] text-black rounded-md transition-colors duration-200"
+            className="bg-[#ca8a04] hover:bg-[#ca8a04] rounded-none text-white transition-colors duration-200"
             onClick={login}>
                 Get Started
             </Button>            

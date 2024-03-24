@@ -19,8 +19,8 @@ export default function HeaderLandingSection() {
 
 
   return (
-    <div className="bg-gradient-to-r from-orange-300 via-red-300 to-orange-300 px-12 py-6">
-        <div className="rounded-lg flex justify-between items-center px-6 py-4 shadow-sm border-grey border-[1px]">
+    <div className="px-12 py-6">
+        <div className="rounded-lg flex justify-between items-center px-6 py-4">
 
             <div className="flex items-center">
             <Sheet>
@@ -43,8 +43,8 @@ export default function HeaderLandingSection() {
               </SheetContent>
             </Sheet>
             <Link href="/" className="ml-4 lg:ml-0">
-              <Image src="/logo.png" width={100} height={100} alt="Share Frames Logo" />
-              {/* <h1 className="text-xl font-bold">Share Frames</h1> */}
+              {/* <Image src="/logo.png" width={100} height={100} alt="Share Frames Logo" /> */}
+              <h1 className="text-xl font-bold">Share-Frames</h1>
             </Link>
           </div>
 
