@@ -3,6 +3,7 @@
 import { useSearchParams } from 'next/navigation'
 import { FrameMetadata } from '@coinbase/onchainkit';
 import { getFarcasterUserAddress } from '@coinbase/onchainkit/farcaster';
+import { Suspense } from "react"
 
 export default async function HomePage() {
 
@@ -32,31 +33,33 @@ export default async function HomePage() {
     let nextFrameUrl = siteURL + '?sfid=' + shareFrameId + '&page=' + nextPageNumber;
 
     return (
-        <FrameMetadata
-            ogTitle='Welcome to the Park'
-            ogDescription='This is a park with a beautiful lake'
-            buttons={[
-                {
-                    label: 'Tell me the story',
-                },
-                {
-                    action: 'link',
-                    label: 'Link to Google' + shareFrameId,
-                    target: 'https://www.google.com'
-                },
-                {
-                    action: 'post',
-                    label: 'Go page:' + nextFrameUrl,
-                },
-            ]}
-            image={{
-                src: 'https://zizzamia.xyz/park-3.png',
-                aspectRatio: '1:1'
-            }}
-            input={{
-                text: 'Tell me a boat story',
-            }}
-            postUrl={ nextFrameUrl }
-        />
+        <Suspense>
+            <FrameMetadata
+                ogTitle='Welcome to the Park'
+                ogDescription='This is a park with a beautiful lake'
+                buttons={[
+                    {
+                        label: 'Tell me the story',
+                    },
+                    {
+                        action: 'link',
+                        label: 'Link to Google' + shareFrameId,
+                        target: 'https://www.google.com'
+                    },
+                    {
+                        action: 'post',
+                        label: 'Go page:' + nextFrameUrl,
+                    },
+                ]}
+                image={{
+                    src: 'https://zizzamia.xyz/park-3.png',
+                    aspectRatio: '1:1'
+                }}
+                input={{
+                    text: 'Tell me a boat story',
+                }}
+                postUrl={nextFrameUrl}
+            />
+        </Suspense>
     );
 }
