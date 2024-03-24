@@ -10,7 +10,7 @@ import {
 import Link from "next/link";
 import { createDebugUrl } from "../debug";
 import { currentURL } from "../utils";
-import { FrameProps, fetchFrames } from "./mockApi/mockShareFrame";
+import { NFTS, fetchFrames } from "./mockApi/mockShareFrame";
 
 type State = {
   pageIndex: number;
@@ -143,7 +143,9 @@ export default async function Home({ searchParams }: NextServerPageProps) {
           <FrameButton action="link" target={frameData.externalUrl}>
             Read Online
           </FrameButton>
-          <FrameButton>Subscribe</FrameButton>
+          <FrameButton action="post" target={`/subscribe-frame?sfid=${"1234"}`}>
+            Subscribe
+          </FrameButton>
           <FrameButton>←</FrameButton>
           <FrameButton>→</FrameButton>
         </FrameContainer>
@@ -173,7 +175,9 @@ export default async function Home({ searchParams }: NextServerPageProps) {
               </div>
             </div>
           </FrameImage>
-          <FrameButton>Get Rewards by Sharing</FrameButton>
+          <FrameButton action="mint" target={NFTS[0]!.tokenUrl}>
+            Get Rewards by Sharing
+          </FrameButton>
           <FrameButton>Leaderboard</FrameButton>
           <FrameButton>←</FrameButton>
         </FrameContainer>
