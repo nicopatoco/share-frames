@@ -9,6 +9,7 @@ import { usePrivy } from '@privy-io/react-auth';
 import { Sheet, SheetContent, SheetTrigger } from "../components/ui/sheet";
 import { Menu } from "lucide-react";
 import GetStartedButtonHeader from './get-started-button-header';
+import Image from "next/image";
 
 export default function HeaderLandingSection() {
 
@@ -42,7 +43,8 @@ export default function HeaderLandingSection() {
               </SheetContent>
             </Sheet>
             <Link href="/" className="ml-4 lg:ml-0">
-              <h1 className="text-xl font-bold">Share Frames</h1>
+              <Image src="/logo.png" width={100} height={100} alt="Share Frames Logo" />
+              {/* <h1 className="text-xl font-bold">Share Frames</h1> */}
             </Link>
           </div>
 
