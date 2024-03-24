@@ -2,22 +2,18 @@
 
 
 import { Button } from "@/components/ui/button"
-import { Avatar } from "@/components/ui/avatar"
 import Link from "next/link";
 
 import { usePrivy } from '@privy-io/react-auth';
 
 import { Sheet, SheetContent, SheetTrigger } from "../components/ui/sheet";
-import { Menu, Moon, Sun } from "lucide-react";
+import { Menu } from "lucide-react";
 import GetStartedButtonHeader from './get-started-button-header';
 
 export default function HeaderLandingSection() {
 
   const {
-    ready,
     authenticated,
-    login,
-    logout
   } = usePrivy();
 
 
