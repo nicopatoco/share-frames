@@ -18,10 +18,13 @@ type State = {
   maxPages: number;
 };
 
-const initialState: State = { pageIndex: 0, sfid: "", maxPages: 0 };
+const initialState: State = {
+  pageIndex: 0,
+  sfid: "",
+  maxPages: 0,
+};
 
 const getPageIndex = (buttonIndex: any, pageIndex: any, maxPages: any) => {
-  console.log("*** pageIndex 1 ***", pageIndex);
   let _pageIndex = 1;
   if (pageIndex == 0) {
     if (buttonIndex == 1) {
@@ -29,8 +32,6 @@ const getPageIndex = (buttonIndex: any, pageIndex: any, maxPages: any) => {
     }
   }
   if (pageIndex > 0 && pageIndex < maxPages - 1) {
-    // console.log("*** pageIndex ***", pageIndex);
-    // console.log("*** buttonIndex ***", buttonIndex);
     if (buttonIndex == 3) {
       _pageIndex = pageIndex - 1;
     }
@@ -39,13 +40,10 @@ const getPageIndex = (buttonIndex: any, pageIndex: any, maxPages: any) => {
     }
   }
   if (pageIndex == maxPages - 1) {
-    // console.log("*** pageIndex ***", pageIndex);
-    // console.log("*** buttonIndex ***", buttonIndex);
     if (buttonIndex == 3) {
       _pageIndex = pageIndex - 1;
     }
   }
-  //console.log("*** _pageIndex 2 ***", _pageIndex);
   return _pageIndex;
 };
 
@@ -65,18 +63,13 @@ export default async function Home({ searchParams }: NextServerPageProps) {
   const [state] = useFramesReducer<State>(reducer, initialState, previousFrame);
 
   let sfid = searchParams?.sfid?.toString();
-
-  console.log("*** sfid ***", sfid);
   if (sfid) {
     initialState.sfid = sfid;
   }
 
-  // Call the function to fetch data
-  const frameData: FrameProps = (await fetchFrames()).data;
-
+  const frameData = (await fetchFrames("1234")).data; // TODO need to fix the sfid param
   const maxPages = frameData.frames.length;
   initialState.maxPages = maxPages;
-  //console.log("*** maxPages ***", maxPages);
 
   // then, when done, return next frame
   if (state.pageIndex == 0) {
@@ -90,20 +83,22 @@ export default async function Home({ searchParams }: NextServerPageProps) {
           previousFrame={previousFrame}
         >
           <FrameImage>
-            <div tw="flex flex-col">
-              <div tw="flex text-6xl font-bold ">
-                {/* This is slide {state.pageIndex + 1} - {sfid} / {maxPages} */}
-                {frameData.frames[state.pageIndex].frameData.title}
+            <div tw="flex w-full h-full text-black justify-center items-center bg-gray-200">
+              <div tw="flex w-6/12 justify-center items-center text-left m-8">
+                <div tw="flex flex-col">
+                  <span tw="text-6xl font-bold pb-8">
+                    {frameData.frames[state.pageIndex].frameData.title}
+                  </span>
+                  <span style={{ whiteSpace: "pre-line" }}>
+                    {frameData.frames[state.pageIndex].frameData.description}
+                  </span>
+                </div>
               </div>
               <img
-                width={300}
-                height={300}
-                src={frameData.frames[state.pageIndex].frameData.imageUrl}
+                tw="flex w-4/12 justify-center items-center border border-200"
+                src={frameData.frames[state.pageIndex].frameData.sideImageUrl}
                 alt="Image"
               />
-              <div tw="flex text-5xl font-bold ">
-                {frameData.frames[state.pageIndex].frameData.description}
-              </div>
             </div>
           </FrameImage>
           <FrameButton action="link" target={frameData.externalUrl}>
@@ -124,19 +119,24 @@ export default async function Home({ searchParams }: NextServerPageProps) {
           previousFrame={previousFrame}
         >
           <FrameImage>
-            <div tw="flex flex-col">
-              <div tw="flex text-6xl font-bold ">
-                {/* This is slide {state.pageIndex + 1} - {sfid} / {maxPages} */}
-                {frameData.frames[state.pageIndex].frameData.title}
-              </div>
-              <img
-                width={300}
-                height={300}
-                src={frameData.frames[state.pageIndex].frameData.imageUrl}
-                alt="Image"
-              />
-              <div tw="flex text-5xl font-bold ">
-                {frameData.frames[state.pageIndex].frameData.description}
+            <div
+              tw="flex w-full h-full text-black justify-center items-center bg-gray-200"
+              // If we want to use a bg image but it is too large
+              // style={{
+              //   backgroundImage: `url(${
+              //     frameData.frames[state.pageIndex].frameData.backgroundImgaUrl
+              //   })`,
+              // }}
+            >
+              <div tw="flex w-10/12 justify-center items-center text-left m-8">
+                <div tw="flex flex-col">
+                  <span tw="text-6xl font-bold pb-8">
+                    {frameData.frames[state.pageIndex].frameData.title}
+                  </span>
+                  <span style={{ whiteSpace: "pre-line" }}>
+                    {frameData.frames[state.pageIndex].frameData.description}
+                  </span>
+                </div>
               </div>
             </div>
           </FrameImage>
@@ -160,19 +160,16 @@ export default async function Home({ searchParams }: NextServerPageProps) {
           previousFrame={previousFrame}
         >
           <FrameImage>
-            <div tw="flex flex-col">
-              <div tw="flex text-6xl font-bold ">
-                {/* This is slide {state.pageIndex + 1} - {sfid} / {maxPages} */}
-                {frameData.frames[state.pageIndex].frameData.title}
-              </div>
-              <img
-                width={300}
-                height={300}
-                src={frameData.frames[state.pageIndex].frameData.imageUrl}
-                alt="Image"
-              />
-              <div tw="flex text-5xl font-bold ">
-                {frameData.frames[state.pageIndex].frameData.description}
+            <div tw="flex w-full h-full text-black justify-center items-center bg-gray-200">
+              <div tw="flex w-10/12 justify-center items-center text-left m-8">
+                <div tw="flex flex-col">
+                  <span tw="text-6xl font-bold pb-8">
+                    {frameData.frames[state.pageIndex].frameData.title}
+                  </span>
+                  <span style={{ whiteSpace: "pre-line" }}>
+                    {frameData.frames[state.pageIndex].frameData.description}
+                  </span>
+                </div>
               </div>
             </div>
           </FrameImage>
